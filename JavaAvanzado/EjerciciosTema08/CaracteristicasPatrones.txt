@@ -1,0 +1,19 @@
+1-	Patrón de diseño SINGLETON: este patrón se utiliza para garantizar que solo exista una instancia de una clase en todo el sistema. 
+	Se utiliza cuando se necesita tener un objeto único que coordine y controle el acceso a algún recurso compartido. 
+	Un ejemplo de caso de uso podría ser un objeto que maneje la CONEXION A BASE DE DATOS.
+
+2-	Patrón de diseño FACTORY: es un patrón de diseño de software que se utiliza para crear objetos
+	sin especificar la clase exacta del objeto que se creará. En lugar de crear objetos directamente utilizando el constructor de la clase, 
+	se utiliza un método de fábrica que se encarga de crear el objeto deseado.
+
+	El patrón Factory es muy útil cuando se quiere desacoplar el código que crea objetos del código que los utiliza, 
+	lo que permite una mayor flexibilidad y reutilización del código.
+	
+	Un ejemplo de caso de uso puede ser en una fabrica de coches en la clase motor, puede tener varias cilindradas y en función de la cilindrada
+	puede tener unas carácteristicas u otras, para ello se definen por cilindrada y en función de la cilindrada ya creara un tipo de motor u otro.
+
+3-	Patrón de diseño Builder: Este patrón se utiliza para construir objetos complejos paso a paso, separando la construcción de un objeto
+	de su representación final. Se utiliza cuando se necesita crear objetos complejos con diferentes configuraciones o partes opcionales. 
+	Un ejemplo de caso de uso podría ser la construcción de un objeto de tipo casa, donde se necesitan diferentes opciones para la construcción de la casa, 
+	como la elección del tipo de techo o el número de habitaciones.
+

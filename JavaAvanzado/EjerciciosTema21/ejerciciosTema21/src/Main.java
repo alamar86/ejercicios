@@ -25,7 +25,7 @@ public class Main {
                 System.out.println(phone2.getClass() + phone2.toString());
                 break;
 
-            case "-SmartWatch":
+            case "SmartWatch":
                 SmartWatch watch = (SmartWatch) new SmartWatch("Samsung")
                         .setHasHeartRateMonitor(true)
                         .setHasSleepTracker(true)

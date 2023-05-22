@@ -1,5 +1,8 @@
 package Parser;
 
+/**
+ * Clase que representa y construye una opción con los parámetros del parser de ApacheCLI
+ */
 public class Opcion {
     private String option;
     private String longOption;

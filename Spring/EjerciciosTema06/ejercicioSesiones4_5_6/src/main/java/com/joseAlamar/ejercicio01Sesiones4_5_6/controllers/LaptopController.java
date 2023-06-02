@@ -57,4 +57,36 @@ public class LaptopController {
         return laptopRepository.save(laptop);
     }
 
+    // Actualizar un laptop en la base de datos
+    @PutMapping("/api/laptops/{id}")
+    public ResponseEntity<Laptop> update(@PathVariable Long id, @RequestBody Laptop laptop) {
+        Optional<Laptop> laptopOpt = laptopRepository.findById(id);
+
+        if (laptopOpt.isPresent()) {
+            Laptop existingLaptop = laptopOpt.get();
+            existingLaptop.setMarca(laptop.getMarca());
+            existingLaptop.setModelo(laptop.getModelo());
+            existingLaptop.setPrecio(laptop.getPrecio());
+
+            Laptop updatedLaptop = laptopRepository.save(existingLaptop);
+            return ResponseEntity.ok(updatedLaptop);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    // Eliminar un laptop de la base de datos
+    @DeleteMapping("/api/laptops/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        Optional<Laptop> laptopOpt = laptopRepository.findById(id);
+
+        if (laptopOpt.isPresent()) {
+            laptopRepository.deleteById(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 }
